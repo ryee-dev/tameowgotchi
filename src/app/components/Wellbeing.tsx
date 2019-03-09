@@ -1,11 +1,34 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from 'antd';
+// @ts-ignore
+import useInterval from '@use-it/interval';
 
 const Wellbeing: React.FC<{}> = () => {
   const [hunger, setHunger] = useState(20);
   const [happiness, setHappiness] = useState(20);
   const [hygiene, setHygiene] = useState(20);
+
+  useInterval(() => {
+    setHunger(currentHunger => currentHunger - 1);
+    setHappiness(currentHappiness => currentHappiness - 1);
+    setHygiene(currentHygiene => currentHygiene - 1);
+  }, 5000);
+
+  if (hunger < 0) {
+    setHunger(0);
+    console.log('feeeed');
+  } else if (hunger > 20) {
+    setHunger(20);
+  } else if (happiness < 0) {
+    setHappiness(0);
+  } else if (happiness > 20) {
+    setHappiness(20);
+  } else if (hygiene < 0) {
+    setHygiene(0);
+  } else if (hygiene > 20) {
+    setHygiene(20);
+  }
 
   console.log(hunger, happiness, hygiene);
 
@@ -46,6 +69,7 @@ const Wrapper = styled.div`
 
   .row {
     width: 100%;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -53,8 +77,12 @@ const Wrapper = styled.div`
 
   .col {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+  }
+
+  button {
+    margin-bottom: 0.5em;
   }
 `;

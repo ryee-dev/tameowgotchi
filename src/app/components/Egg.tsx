@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Button from 'antd/lib/button';
+import {
+  BrownTabby,
+  Bombay,
+  ExoticShorthair,
+  MaineCoon,
+  Siamese,
+} from '../assets/images';
 
-const Egg: React.FC<{}> = () => {
-  const CatBreeds = [
-    'Brown Tabby',
-    'Bombay',
-    'Exotic Shorthair',
-    'Siamese',
-    'Maine Coon',
-  ];
-  const [egg, setEgg] = useState('');
+interface EggProps {
+  egg: string;
+  selectBreed: any;
+}
 
-  console.log(egg);
-
+const Egg: React.FC<EggProps> = props => {
   return (
     <Container className="container">
-      <Button
-        onClick={() =>
-          setEgg(CatBreeds[Math.floor(Math.random() * Math.floor(4))])
-        }
-      >
-        Hatch Egg
-      </Button>
-      <h1>{egg}</h1>
+      <Button onClick={props.selectBreed}>Hatch Egg</Button>
+      <h1>{props.egg}</h1>
+
+      {props.egg === 'Brown Tabby' && (
+        <img src={BrownTabby} alt="brown-tabby" />
+      )}
+      {props.egg === 'Bombay' && <img src={Bombay} alt="bombay" />}
+      {props.egg === 'Exotic Shorthair' && (
+        <img src={ExoticShorthair} alt="exotic-shorthair" />
+      )}
+      {props.egg === 'Siamese' && <img src={Siamese} alt="siamese" />}
+      {props.egg === 'Maine Coon' && <img src={MaineCoon} alt="maine-coon" />}
     </Container>
   );
 };
@@ -34,7 +39,11 @@ const Container = styled.div`
   //padding: 4rem;
   align-self: center;
   justify-self: center;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  img {
+    max-width: 300px;
+  }
 `;

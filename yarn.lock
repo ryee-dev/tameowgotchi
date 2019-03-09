@@ -1153,6 +1153,11 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
+"@use-it/interval@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-0.1.1.tgz#aa4ec21d27a303de3b83b82c24ed90b8391918ec"
+  integrity sha512-82ohtpG/OtXMduCX0/sJnDZrVsGZMYb5elpPIJ78D/UOOKN5clrKrsJ5jVNj49WWnF7PUEgCOw2TfsAplWjxIQ==
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
