@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Button from 'antd/lib/button';
 
 const Egg: React.FC<{}> = () => {
   const CatBreeds = [
@@ -11,17 +12,17 @@ const Egg: React.FC<{}> = () => {
   ];
   const [egg, setEgg] = useState('');
 
-  // const RandomizeEgg = () => {
-  //
-  // }
+  console.log(egg);
 
   return (
     <Container>
-      <button
-        onClick={() => setEgg(CatBreeds[Math.floor(Math.random() * 5 + 1)])}
+      <Button
+        onClick={() =>
+          setEgg(CatBreeds[Math.floor(Math.random() * Math.floor(4))])
+        }
       >
         Hatch Egg
-      </button>
+      </Button>
       <h1>{egg}</h1>
     </Container>
   );
@@ -32,5 +33,7 @@ export default Egg;
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 4rem;
 `;
