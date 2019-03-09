@@ -4,11 +4,12 @@ import { Egg, Wellbeing } from './components';
 import { Button } from 'antd';
 import {
   Bombay,
-  BrownTabby,
+  // BrownTabby,
   ExoticShorthair,
   MaineCoon,
   Siamese,
 } from './assets/images';
+import { BrownTabbySmile, BrownTabbyYiss } from './assets/images/browntabby';
 
 const Game: React.FC = () => {
   const CatBreeds = [
@@ -81,10 +82,10 @@ const Cat = styled.div`
   background-repeat: no-repeat;
 
   &.browntabby {
-    background-image: url(${BrownTabby});
+    background-image: url(${BrownTabbySmile});
 
     &:active {
-      background-image: url(${Bombay});
+      background-image: url(${BrownTabbyYiss});
     }
   }
 
