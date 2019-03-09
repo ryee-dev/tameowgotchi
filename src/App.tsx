@@ -36,8 +36,5 @@ export default App;
 const AppShell = styled.div`
   padding: 3rem 5rem;
   width: 100%;
-  display: flex;
-  //align-items: center;
-  //justify-content: center;
-  flex-direction: column;
+  
 `;
