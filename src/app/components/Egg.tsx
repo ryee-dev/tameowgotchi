@@ -15,7 +15,7 @@ const Egg: React.FC<{}> = () => {
   console.log(egg);
 
   return (
-    <Container>
+    <Container className="container">
       <Button
         onClick={() =>
           setEgg(CatBreeds[Math.floor(Math.random() * Math.floor(4))])
@@ -31,9 +31,10 @@ const Egg: React.FC<{}> = () => {
 export default Egg;
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  //padding: 4rem;
+  align-self: center;
+  justify-self: center;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
-  padding: 4rem;
 `;

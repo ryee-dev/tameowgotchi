@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: "Kyrial Display Pro", sans-serif;
   }
+  
+  div.container {
+    display: flex;
+    //flex-direction: column;
+  }
 `;
 
 class App extends Component {
@@ -29,8 +34,10 @@ class App extends Component {
 export default App;
 
 const AppShell = styled.div`
+  padding: 3rem 5rem;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  //align-items: center;
+  //justify-content: center;
+  flex-direction: column;
 `;
