@@ -1,2 +1,10 @@
 export { default as BrownTabbySmile } from './smile.png';
-export { default as BrownTabbyYiss } from './awwyiss.png';
+export { default as BrownTabbyYiss } from './yiss.png';
+export { default as BrownTabbyAhhh } from './ahhh.png';
+export { default as BrownTabbyAngwy } from './angwy.png';
+export { default as BrownTabbyBlep } from './blep.png';
+export { default as BrownTabbyHasBite } from './drool.png';
+export { default as BrownTabbyDitto } from './ditto.png';
+export { default as BrownTabbyLmao } from './lmao.png';
+export { default as BrownTabbyOmg } from './ohgod.png';
+export { default as BrownTabbyWhatever } from './whatever.png';

@@ -1,0 +1,10 @@
+export { default as ExoticShorthairSmile } from './smile.png';
+export { default as ExoticShorthairYiss } from './yiss.png';
+export { default as ExoticShorthairAhhh } from './ahhh.png';
+export { default as ExoticShorthairAngwy } from './angwy.png';
+export { default as ExoticShorthairBlep } from './blep.png';
+export { default as ExoticShorthairHasBite } from './drool.png';
+export { default as ExoticShorthairDitto } from './ditto.png';
+export { default as ExoticShorthairLmao } from './lmao.png';
+export { default as ExoticShorthairOmg } from './ohgod.png';
+export { default as ExoticShorthairWhatever } from './whatever.png';

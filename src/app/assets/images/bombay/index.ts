@@ -1,0 +1,10 @@
+export { default as BombaySmile } from './smile.png';
+export { default as BombayYiss } from './yiss.png';
+export { default as BombayAhhh } from './ahhh.png';
+export { default as BombayAngwy } from './angwy.png';
+export { default as BombayBlep } from './blep.png';
+export { default as BombayHasBite } from './drool.png';
+export { default as BombayDitto } from './ditto.png';
+export { default as BombayLmao } from './lmao.png';
+export { default as BombayOmg } from './ohgod.png';
+export { default as BombayWhatever } from './whatever.png';

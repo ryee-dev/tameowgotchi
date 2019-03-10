@@ -2,19 +2,14 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": [
-      "dom",
-      "es6",
-      "es2017",
-      "esnext"
-    ],
+    "lib": ["dom", "es6", "es2017", "esnext"],
     "sourceMap": true,
     "outDir": "build/",
     "moduleResolution": "node",
     "declaration": false,
     "composite": false,
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "noImplicitThis": true,
@@ -36,13 +31,6 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "scripts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "dist", "scripts"]
 }

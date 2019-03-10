@@ -3,24 +3,27 @@ import styled from 'styled-components';
 import Button from 'antd/lib/button';
 
 interface EggProps {
-  egg: string;
-  selectBreed: any;
+  // egg: string;
+  selectBreed: Function;
   started: boolean;
   hatched: boolean;
 }
 
-const Egg: React.FC<EggProps> = props => {
+const Egg: React.FC<EggProps> = (props: EggProps) => {
+  const { selectBreed, started, hatched } = props;
+
   return (
     <Container className="container">
-      {!props.started && (
+      {!started && (
         <div>
-          {!props.hatched && (
-            <Button onClick={props.selectBreed}>Hatch Egg</Button>
+          {!hatched && (
+            // @ts-ignore
+            <Button onClick={selectBreed}>Hatch Egg</Button>
           )}
         </div>
       )}
 
-      <h1>{props.egg}</h1>
+      {/*<h1>{egg}</h1>*/}
     </Container>
   );
 };
@@ -34,6 +37,4 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  
 `;

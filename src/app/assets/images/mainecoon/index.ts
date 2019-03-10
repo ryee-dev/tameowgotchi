@@ -1,0 +1,10 @@
+export { default as MaineCoonSmile } from './smile.png';
+export { default as MaineCoonYiss } from './yiss.png';
+export { default as MaineCoonAhhh } from './ahhh.png';
+export { default as MaineCoonAngwy } from './angwy.png';
+export { default as MaineCoonBlep } from './blep.png';
+export { default as MaineCoonHasBite } from './drool.png';
+export { default as MaineCoonDitto } from './ditto.png';
+export { default as MaineCoonLmao } from './lmao.png';
+export { default as MaineCoonOmg } from './ohgod.png';
+export { default as MaineCoonWhatever } from './whatever.png';

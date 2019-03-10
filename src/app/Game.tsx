@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Egg, Wellbeing } from './components';
 import { Button } from 'antd';
-import {
-  Bombay,
-  // BrownTabby,
-  ExoticShorthair,
-  MaineCoon,
-  Siamese,
-} from './assets/images';
-import { BrownTabbySmile, BrownTabbyYiss } from './assets/images/browntabby';
+import { Egg, Wellbeing, CatRender } from './components';
 
 const Game: React.FC = () => {
   const CatBreeds = [
-    'Brown Tabby',
+    'BrownTabby',
     'Bombay',
-    'Exotic Shorthair',
+    'ExoticShorthair',
     'Siamese',
-    'Maine Coon',
+    'MaineCoon',
   ];
 
   const [started, setStarted] = useState(false);
@@ -29,25 +21,34 @@ const Game: React.FC = () => {
     setHatched(true);
   };
 
+  const [hunger, setHunger] = useState(20);
+  const [happiness, setHappiness] = useState(20);
+  const [hygiene, setHygiene] = useState(20);
+  const [mood, setMood] = useState('smile');
+
   return (
     <GameShell>
-      {/*<h1>test</h1>*/}
-      <Egg
-        egg={egg}
-        selectBreed={selectBreed}
-        started={started}
-        hatched={hatched}
-      />
+      <Egg selectBreed={selectBreed} started={started} hatched={hatched} />
       <div className="cat-container">
-        {egg === 'Brown Tabby' && <Cat className="browntabby" />}
-        {egg === 'Bombay' && <Cat className="bombay" />}
-        {egg === 'Exotic Shorthair' && <Cat className="exoticshorthair" />}
-        {egg === 'Siamese' && <Cat className="siamese" />}
-        {egg === 'Maine Coon' && <Cat className="mainecoon" />}
+        <CatRender
+          egg={egg}
+          hunger={hunger}
+          happiness={happiness}
+          hygiene={hygiene}
+          mood={mood}
+          setMood={setMood}
+        />
       </div>
 
       {started ? (
-        <Wellbeing />
+        <Wellbeing
+          hunger={hunger}
+          setHunger={setHunger}
+          happiness={happiness}
+          setHappiness={setHappiness}
+          hygiene={hygiene}
+          setHygiene={setHygiene}
+        />
       ) : (
         <div>
           {hatched && <Button onClick={() => setStarted(true)}>Start</Button>}
@@ -70,38 +71,14 @@ const GameShell = styled.div`
   }
 
   .cat-container {
-    height: 500px;
-    width: 500px;
-  }
-`;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
 
-const Cat = styled.div`
-  height: 100%;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  &.browntabby {
-    background-image: url(${BrownTabbySmile});
-
-    &:active {
-      background-image: url(${BrownTabbyYiss});
+    img {
+      //height: 500px;
+      width: 500px;
     }
-  }
-
-  &.bombay {
-    background-image: url(${Bombay});
-  }
-
-  &.exoticshorthair {
-    background-image: url(${ExoticShorthair});
-  }
-
-  &.siamese {
-    background-image: url(${Siamese});
-  }
-
-  &.mainecoon {
-    background-image: url(${MaineCoon});
   }
 `;

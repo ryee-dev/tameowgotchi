@@ -1,23 +1,36 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { Button } from 'antd';
 // @ts-ignore
 import useInterval from '@use-it/interval';
 
-const Wellbeing: React.FC<{}> = () => {
-  const [hunger, setHunger] = useState(20);
-  const [happiness, setHappiness] = useState(20);
-  const [hygiene, setHygiene] = useState(20);
+interface WellbeingProps {
+  hunger: number;
+  happiness: number;
+  hygiene: number;
+  setHunger: Function;
+  setHappiness: Function;
+  setHygiene: Function;
+}
+
+const Wellbeing: React.FC<WellbeingProps> = (props: WellbeingProps) => {
+  const {
+    hunger,
+    happiness,
+    hygiene,
+    setHunger,
+    setHappiness,
+    setHygiene,
+  } = props;
 
   useInterval(() => {
-    setHunger(currentHunger => currentHunger - 1);
-    setHappiness(currentHappiness => currentHappiness - 1);
-    setHygiene(currentHygiene => currentHygiene - 1);
+    setHunger((currentHunger: number) => currentHunger - 1);
+    setHappiness((currentHappiness: number) => currentHappiness - 1);
+    setHygiene((currentHygiene: number) => currentHygiene - 1);
   }, 5000);
 
   if (hunger < 0) {
     setHunger(0);
-    console.log('feeeed');
   } else if (hunger > 20) {
     setHunger(20);
   } else if (happiness < 0) {
@@ -51,6 +64,13 @@ const Wellbeing: React.FC<{}> = () => {
           <Button onClick={() => setHunger(hunger + 2)}>Feed</Button>
           <Button onClick={() => setHappiness(happiness + 2)}>Play</Button>
           <Button onClick={() => setHygiene(hygiene + 2)}>Wash</Button>
+        </div>
+        <div className="col">
+          <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button>
+          <Button onClick={() => setHappiness(happiness - 5)}>
+            -happiness
+          </Button>
+          <Button onClick={() => setHygiene(hygiene - 5)}>-hygiene</Button>
         </div>
       </div>
     </Wrapper>

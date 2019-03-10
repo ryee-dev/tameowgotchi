@@ -1,0 +1,10 @@
+export { default as SiameseSmile } from './smile.png';
+export { default as SiameseYiss } from './yiss.png';
+export { default as SiameseAhhh } from './ahhh.png';
+export { default as SiameseAngwy } from './angwy.png';
+export { default as SiameseBlep } from './blep.png';
+export { default as SiameseHasBite } from './drool.png';
+export { default as SiameseDitto } from './ditto.png';
+export { default as SiameseLmao } from './lmao.png';
+export { default as SiameseOmg } from './ohgod.png';
+export { default as SiameseWhatever } from './whatever.png';
