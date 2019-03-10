@@ -19,7 +19,7 @@
             <entry file="file://$PROJECT_DIR$/src/App.tsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="436">
-                  <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+                  <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -60,7 +60,7 @@
             <entry file="file://$PROJECT_DIR$/src/app/components/Egg.tsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="414">
-                  <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+                  <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -72,7 +72,7 @@
             <entry file="file://$PROJECT_DIR$/src/app/components/CatRender.tsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="107">
-                  <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+                  <caret line="130" selection-start-line="130" selection-end-line="130" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -107,20 +107,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app/assets/images/siamese/index.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/assets/images/mainecoon/index.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
-                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
                 </state>
               </provider>
             </entry>
@@ -246,15 +246,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="mainecoon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tameowgotchi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tameowgotchi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
               <item name="siamese" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,8 +288,8 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/assets/images" />
       <recent name="$PROJECT_DIR$/src/app/assets/images/siamese" />
+      <recent name="$PROJECT_DIR$/src/app/assets/images" />
       <recent name="$PROJECT_DIR$/src/app/assets/images/mainecoon" />
       <recent name="$PROJECT_DIR$/src/app/assets/images/exoticshorthair" />
     </key>
@@ -333,12 +324,12 @@
       <workItem from="1552193050757" duration="52000" />
       <workItem from="1552193207814" duration="175000" />
       <workItem from="1552193400009" duration="3441000" />
-      <workItem from="1552197107183" duration="11656000" />
+      <workItem from="1552197107183" duration="12107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33432000" />
+    <option name="totallyTimeSpent" value="33883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1080" extended-state="0" />
@@ -447,7 +438,7 @@
     <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -456,13 +447,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/assets/icons/egg.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/assets/images/siamese/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
@@ -481,7 +465,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/components/Egg.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -519,7 +503,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/components/CatRender.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -527,6 +511,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/assets/images/mainecoon/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/assets/images/siamese/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
