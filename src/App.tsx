@@ -9,9 +9,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "Kyrial Display Pro", sans-serif;
+    box-sizing: border-box;
   }
   
   div.container {
+    box-sizing: border-box;
     display: flex;
     //flex-direction: column;
   }
@@ -36,5 +38,9 @@ export default App;
 const AppShell = styled.div`
   padding: 3rem 5rem;
   width: 100%;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
 `;

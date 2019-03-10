@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from 'antd/lib/button';
+import { useHover } from 'use-events';
+import { ReactComponent as EggSvg } from '../assets/icons/egg.svg';
+import { ReactComponent as HatchEggSvg } from '../assets/icons/hatchegg.svg';
 
 interface EggProps {
   // egg: string;
@@ -11,19 +13,21 @@ interface EggProps {
 
 const Egg: React.FC<EggProps> = (props: EggProps) => {
   const { selectBreed, started, hatched } = props;
+  const [isHovered, bind] = useHover();
 
   return (
     <Container className="container">
       {!started && (
         <div>
           {!hatched && (
-            // @ts-ignore
-            <Button onClick={selectBreed}>Hatch Egg</Button>
+            <HatchButton onClick={selectBreed} {...bind}>
+              {isHovered ? <HatchEggSvg /> : <EggSvg />}
+            </HatchButton>
           )}
         </div>
       )}
 
-      {/*<h1>{egg}</h1>*/}
+      {/* <h1>{egg}</h1> */}
     </Container>
   );
 };
@@ -38,3 +42,41 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
+
+const HatchButton = styled.div`
+  width: 300px;
+  //transition: transform 0.3s ease-in-out;
+
+  svg {
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+
+    //&:active {
+    //  transform: scale(0.9);
+    //}
+  }
+`;
+
+// const HatchButton = styled.div`
+//   // @ts-ignore
+//   //background-image: url(${EggImage});
+//   //background-repeat: no-repeat;
+//   //background-size: contain;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 1rem 0.6rem;
+//   //border: 1px solid black;
+//   box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
+//   transition: box-shadow 0.3s ease-in-out;
+//   cursor: pointer;
+//   border-radius: 10px;
+//
+//   font-size: 1.6rem;
+//
+//   &:active {
+//     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.3);
+//   }
+// `;

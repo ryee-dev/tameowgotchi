@@ -15,17 +15,16 @@ const Game: React.FC = () => {
   const [started, setStarted] = useState(false);
   const [egg, setEgg] = useState('');
   const [hatched, setHatched] = useState(false);
-
-  const selectBreed = () => {
-    setEgg(CatBreeds[Math.floor(Math.random() * Math.floor(4))]);
-    setHatched(true);
-  };
-
   const [hunger, setHunger] = useState(20);
   const [happiness, setHappiness] = useState(20);
   const [hygiene, setHygiene] = useState(20);
   const [mood, setMood] = useState('smile');
 
+  const selectBreed = () => {
+    setEgg(CatBreeds[Math.floor(Math.random() * Math.floor(4))]);
+    setHatched(true);
+    setMood('yiss');
+  };
   return (
     <GameShell>
       <Egg selectBreed={selectBreed} started={started} hatched={hatched} />
@@ -36,6 +35,7 @@ const Game: React.FC = () => {
           happiness={happiness}
           hygiene={hygiene}
           mood={mood}
+          started={started}
           setMood={setMood}
         />
       </div>
@@ -66,10 +66,6 @@ const GameShell = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  img {
-    max-width: 300px;
-  }
-
   .cat-container {
     display: flex;
     align-items: center;
@@ -79,6 +75,8 @@ const GameShell = styled.div`
     img {
       //height: 500px;
       width: 500px;
+      user-drag: none;
+      user-select: none;
     }
   }
 `;
