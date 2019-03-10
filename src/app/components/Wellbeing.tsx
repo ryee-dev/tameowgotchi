@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Button } from 'antd';
+// import { Button } from 'antd';
 // @ts-ignore
 import useInterval from '@use-it/interval';
 import { ReactComponent as WashIcon } from '../assets/icons/wash.svg';
@@ -63,11 +63,11 @@ const Wellbeing: React.FC<WellbeingProps> = (props: WellbeingProps) => {
           <WashIcon />
         </GameButton>
       </div>
-      <div className="row">
-        <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button>
-        <Button onClick={() => setHappiness(happiness - 5)}>-happiness</Button>
-        <Button onClick={() => setHygiene(hygiene - 5)}>-hygiene</Button>
-      </div>
+      {/*<div className="row">*/}
+      {/*  <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button>*/}
+      {/*  <Button onClick={() => setHappiness(happiness - 5)}>-happiness</Button>*/}
+      {/*  <Button onClick={() => setHygiene(hygiene - 5)}>-hygiene</Button>*/}
+      {/*</div>*/}
     </Wrapper>
   );
 };
@@ -84,7 +84,6 @@ const Wrapper = styled.div`
 
   .row {
     width: 100%;
-    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
