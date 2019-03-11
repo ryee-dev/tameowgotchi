@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Button } from 'antd';
 import { Egg, Wellbeing, CatRender } from './components';
 
-const Game: React.FC = () => {
+const Game: React.FC<{}> = () => {
   const CatBreeds = [
     'BrownTabby',
     'Bombay',
@@ -25,10 +25,20 @@ const Game: React.FC = () => {
     setHatched(true);
     setMood('yiss');
   };
+
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
     <GameShell>
       <Egg selectBreed={selectBreed} started={started} hatched={hatched} />
       <div className="cat-container">
+        {hatched && (
+          <Button htmlType="button" onClick={refreshPage}>
+            Start Over?
+          </Button>
+        )}
         <CatRender
           egg={egg}
           hunger={hunger}
@@ -50,9 +60,17 @@ const Game: React.FC = () => {
           setHygiene={setHygiene}
         />
       ) : (
-        <div>
-          {hatched && <Button onClick={() => setStarted(true)}>Start</Button>}
-        </div>
+        <>
+          {hatched && (
+            <Button
+              htmlType="button"
+              onClick={() => setStarted(true)}
+              style={{ width: '100%' }}
+            >
+              Start
+            </Button>
+          )}
+        </>
       )}
     </GameShell>
   );
@@ -70,10 +88,12 @@ const GameShell = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 1rem 0;
 
     img {
-      max-height: 500px;
+      //max-height: 500px;
+      max-width: 500px;
       //width: 18rem;
       user-drag: none;
       user-select: none;

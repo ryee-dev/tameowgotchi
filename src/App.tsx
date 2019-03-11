@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'antd/dist/antd.css';
 import { Helmet } from 'react-helmet';
 import styled, { createGlobalStyle } from 'styled-components';
@@ -19,19 +19,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <AppShell>
-        <Helmet>
-          <link rel="stylesheet" href="https://use.typekit.net/yfb8knl.css" />
-        </Helmet>
-        <GlobalStyle />
-        <Game />
-      </AppShell>
-    );
-  }
-}
+const App: React.FC<{}> = () => {
+  return (
+    <AppShell>
+      <Helmet>
+        <link rel="stylesheet" href="https://use.typekit.net/yfb8knl.css" />
+        <title>Tameowgotchi</title>
+      </Helmet>
+      <GlobalStyle />
+      <Game />
+    </AppShell>
+  );
+};
 
 export default App;
 

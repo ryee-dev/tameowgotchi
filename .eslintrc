@@ -38,7 +38,7 @@
     "import/extensions": { "ts": "never", "tsx": "never" },
     "no-use-before-define": "warn",
     "no-param-reassign": "warn",
-    "no-explicit-any": "warn",
+    "no-explicit-any": "off",
     "no-else-return": "off"
   },
   "settings": {

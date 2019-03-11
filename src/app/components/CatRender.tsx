@@ -67,7 +67,7 @@ interface CatProps {
   hygiene: number;
   mood: string;
   started: boolean;
-  setMood: Function;
+  setMood: (mood: string) => void;
 }
 
 const CatRender: React.FC<CatProps> = (props: CatProps) => {

@@ -1,12 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-// import { Button } from 'antd';
-// @ts-ignore
 import useInterval from '@use-it/interval';
 import { ReactComponent as WashIcon } from '../assets/icons/wash.svg';
 import { ReactComponent as FishIcon } from '../assets/icons/fish.svg';
 import { ReactComponent as ToyIcon } from '../assets/icons/toy.svg';
-// import { ReactComponent as EggIcon } from '../assets/icons/egg.svg';
 
 interface WellbeingProps {
   hunger: number;

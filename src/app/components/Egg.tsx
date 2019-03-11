@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
+// import { useSpring, animated } from 'react-spring';
 import { useHover } from 'use-events';
 import { ReactComponent as EggSvg } from '../assets/icons/egg.svg';
-import { ReactComponent as HatchEggSvg } from '../assets/icons/hatchegg.svg';
+import { ReactComponent as HatchingSvg } from '../assets/icons/hatchegg.svg';
 
 const EggWrapper = posed.div({
   pressable: true,
@@ -11,18 +12,17 @@ const EggWrapper = posed.div({
   press: { scale: 0.9 },
 });
 
-// const PosedHatched = posed(HatchEggSvg)({
-//   pressable: true,
-//   init: { scale: 1 },
-//   press: { scale: 0.8 },
-// });
-
 interface EggProps {
   // egg: string;
   selectBreed: Function;
   started: boolean;
   hatched: boolean;
 }
+
+// const animateEgg = useSpring({
+//   transform: 'rotate(30deg)',
+//   from: { transform: 'rotate(30deg)' },
+// });
 
 const Egg: React.FC<EggProps> = (props: EggProps) => {
   const { selectBreed, started, hatched } = props;
@@ -34,7 +34,7 @@ const Egg: React.FC<EggProps> = (props: EggProps) => {
         <EggWrapper>
           {!hatched && (
             <HatchButton onClick={selectBreed} {...bind}>
-              {isHovered ? <HatchEggSvg /> : <EggSvg />}
+              {isHovered ? <HatchingSvg /> : <EggSvg />}
             </HatchButton>
           )}
         </EggWrapper>
@@ -49,21 +49,39 @@ export default Egg;
 
 const Container = styled.div`
   //padding: 4rem;
+  width: 100%;
   align-self: center;
   justify-self: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  ${EggWrapper} {
+    transition: transform 2s ease;
+  }
 `;
 
 const HatchButton = styled.div`
-  width: 500px;
+  //width: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   //transition: transform 0.3s ease-in-out;
 
   svg {
+    &.hatched {
+      opacity: 0;
+      transition: opacity 5s ease;
+    }
     transition: transform 3s ease-in-out;
     &:hover {
       cursor: pointer;
+
+      &.hatched {
+        opacity: 1;
+      }
       //transform: scale(2);
     }
 
