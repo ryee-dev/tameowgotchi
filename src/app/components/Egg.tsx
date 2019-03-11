@@ -7,7 +7,6 @@ import { ReactComponent as HatchEggSvg } from '../assets/icons/hatchegg.svg';
 
 const EggWrapper = posed.div({
   pressable: true,
-  draggable: true,
   init: { scale: 1 },
   press: { scale: 0.9 },
 });
