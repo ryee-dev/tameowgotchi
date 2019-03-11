@@ -57,7 +57,7 @@ const Container = styled.div`
 `;
 
 const HatchButton = styled.div`
-  width: 300px;
+  width: 500px;
   //transition: transform 0.3s ease-in-out;
 
   svg {

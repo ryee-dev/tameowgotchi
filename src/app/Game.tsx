@@ -73,8 +73,8 @@ const GameShell = styled.div`
     padding: 1rem 0;
 
     img {
-      //height: 500px;
-      width: 500px;
+      max-height: 500px;
+      //width: 18rem;
       user-drag: none;
       user-select: none;
     }
