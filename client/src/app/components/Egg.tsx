@@ -48,9 +48,10 @@ const HatchButton = styled.div`
   //transition: transform 0.3s ease-in-out;
 
   svg {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 3s ease-in-out;
     &:hover {
       cursor: pointer;
+      transform: scale(2);
     }
 
     //&:active {
