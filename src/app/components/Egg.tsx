@@ -1,8 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 import { useHover } from 'use-events';
 import { ReactComponent as EggSvg } from '../assets/icons/egg.svg';
 import { ReactComponent as HatchEggSvg } from '../assets/icons/hatchegg.svg';
+
+const EggWrapper = posed.div({
+  pressable: true,
+  draggable: true,
+  init: { scale: 1 },
+  press: { scale: 0.9 },
+});
+
+// const PosedHatched = posed(HatchEggSvg)({
+//   pressable: true,
+//   init: { scale: 1 },
+//   press: { scale: 0.8 },
+// });
 
 interface EggProps {
   // egg: string;
@@ -18,13 +32,13 @@ const Egg: React.FC<EggProps> = (props: EggProps) => {
   return (
     <Container className="container">
       {!started && (
-        <div>
+        <EggWrapper>
           {!hatched && (
             <HatchButton onClick={selectBreed} {...bind}>
               {isHovered ? <HatchEggSvg /> : <EggSvg />}
             </HatchButton>
           )}
-        </div>
+        </EggWrapper>
       )}
 
       {/* <h1>{egg}</h1> */}
@@ -51,7 +65,7 @@ const HatchButton = styled.div`
     transition: transform 3s ease-in-out;
     &:hover {
       cursor: pointer;
-      transform: scale(2);
+      //transform: scale(2);
     }
 
     //&:active {
