@@ -29,9 +29,9 @@ const Egg: React.FC<EggProps> = (props: EggProps) => {
   const [isHovered, bind] = useHover();
 
   return (
-    <Container className="container">
+    <Container>
       {!started && (
-        <EggWrapper>
+        <EggWrapper className="egg-wrapper">
           {!hatched && (
             <HatchButton onClick={selectBreed} {...bind}>
               {isHovered ? <HatchingSvg /> : <EggSvg />}
@@ -49,21 +49,21 @@ export default Egg;
 
 const Container = styled.div`
   //padding: 4rem;
-  width: 100%;
+  display: flex;
   align-self: center;
   justify-self: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  ${EggWrapper} {
+  .egg-wrapper {
     transition: transform 2s ease;
   }
 `;
 
 const HatchButton = styled.div`
-  //width: 100%;
-  width: 600px;
+  width: 800px;
+  //max-width: 580px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,33 +82,10 @@ const HatchButton = styled.div`
       &.hatched {
         opacity: 1;
       }
-      //transform: scale(2);
     }
+  }
 
-    //&:active {
-    //  transform: scale(0.9);
-    //}
+  @media (max-width: 500px) {
+    //padding: 0;
   }
 `;
-
-// const HatchButton = styled.div`
-//   // @ts-ignore
-//   //background-image: url(${EggImage});
-//   //background-repeat: no-repeat;
-//   //background-size: contain;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 1rem 0.6rem;
-//   //border: 1px solid black;
-//   box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
-//   transition: box-shadow 0.3s ease-in-out;
-//   cursor: pointer;
-//   border-radius: 10px;
-//
-//   font-size: 1.6rem;
-//
-//   &:active {
-//     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.3);
-//   }
-// `;

@@ -1023,6 +1023,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/howler@*":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@types/howler/-/howler-2.1.0.tgz#a525727788dd941aaab0dfde937e374c0f37cf95"
+  integrity sha512-FQiZRxGbBoOEe35dg1BOIQ+YHEYO3SldrnaPuKJJVuaxJJ/7NwEah87tyWxoTgunLlj6p4kkDKYcQH0aAXliQw==
+
 "@types/invariant@^2.2.29":
   version "2.2.29"
   resolved "https://registry.yarnpkg.com/@types/invariant/-/invariant-2.2.29.tgz#aa845204cd0a289f65d47e0de63a6a815e30cc66"
@@ -1082,6 +1087,14 @@
   resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-5.0.8.tgz#f080eea6652e44f60b4574463d238f268d81d9af"
   integrity sha512-ZTr12eDAYI0yUiMx1K82EHqRYa8J1BOOLus+0gL+AkksUiIPwLE0wLiXa9FNqD8r9GXAi+yRPZImkRh1JNlTkQ==
   dependencies:
+    "@types/react" "*"
+
+"@types/react-howler@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@types/react-howler/-/react-howler-3.7.0.tgz#675465a4a56b636638f39d84ddb062bde5e4c479"
+  integrity sha512-+AH+o7DbHmG67ztnp27XIIeOOHm6VpAlMmvriekYsCs1pgZWIm2nx0aIMdx+SIEKmAm4POMwziOTSldQTSjSCg==
+  dependencies:
+    "@types/howler" "*"
     "@types/react" "*"
 
 "@types/react-native@*":
@@ -5156,6 +5169,11 @@ hosted-git-info@^2.1.4:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
   integrity sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
+
+howler@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/howler/-/howler-2.1.1.tgz#b8ae44b83f4b8a5b5ef354030ed0927314d8a996"
+  integrity sha512-9nwyDCGxhAGMmNXDfMLv0M/uS/WUg2//jG6t96D8DqbbsVZgXQzsP/ZMItbWO/Fqg7Gg69kOv3xVSDzJdd7aqA==
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -9592,6 +9610,14 @@ react-helmet@^5.2.0:
     prop-types "^15.5.4"
     react-side-effect "^1.1.0"
 
+react-howler@^3.7.4:
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/react-howler/-/react-howler-3.7.4.tgz#66b4e1eb9f94cb86aa8def9d0b8afaac0ebffffc"
+  integrity sha512-cQhzgIZd8wf6drtyjGJtT/9ShfN20jSyse+dGCPL9v5erz0pdusTQqGhuqFdVkNmYWfk2TQVck5w4nHqaCCyyg==
+  dependencies:
+    howler "^2.1.1"
+    prop-types "^15.5.6"
+
 react-is@^16.6.0:
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
@@ -9616,6 +9642,11 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-particles-js@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-2.4.2.tgz#34a4d1ea15eaebcbb068f7b6a7c43b18792fcf65"
+  integrity sha512-/rfpLRYUA4JFEBBM8cN3X+kEr9P7J2lXktJi81ugcK6B9H69xNlDFKXOUYe+YizW8E5NapxNgubAcKYt0Co7TQ==
 
 react-pose@^4.0.8:
   version "4.0.8"

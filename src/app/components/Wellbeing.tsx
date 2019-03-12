@@ -45,8 +45,6 @@ const Wellbeing: React.FC<WellbeingProps> = (props: WellbeingProps) => {
     setHygiene(20);
   }
 
-  console.log(hunger, happiness, hygiene);
-
   return (
     <Wrapper className="container">
       <div className="row">
@@ -60,11 +58,11 @@ const Wellbeing: React.FC<WellbeingProps> = (props: WellbeingProps) => {
           <WashIcon />
         </GameButton>
       </div>
-      {/*<div className="row">*/}
-      {/*  <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button>*/}
-      {/*  <Button onClick={() => setHappiness(happiness - 5)}>-happiness</Button>*/}
-      {/*  <Button onClick={() => setHygiene(hygiene - 5)}>-hygiene</Button>*/}
-      {/*</div>*/}
+      {/* <div className="row"> */}
+      {/*  <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button> */}
+      {/*  <Button onClick={() => setHappiness(happiness - 5)}>-happiness</Button> */}
+      {/*  <Button onClick={() => setHygiene(hygiene - 5)}>-hygiene</Button> */}
+      {/* </div> */}
     </Wrapper>
   );
 };
@@ -102,8 +100,8 @@ const GameButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   //padding: 0.6rem;
   border-radius: 100px;
   //border: 1px solid black;

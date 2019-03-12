@@ -48,30 +48,30 @@ const Game: React.FC<{}> = () => {
           started={started}
           setMood={setMood}
         />
-      </div>
 
-      {started ? (
-        <Wellbeing
-          hunger={hunger}
-          setHunger={setHunger}
-          happiness={happiness}
-          setHappiness={setHappiness}
-          hygiene={hygiene}
-          setHygiene={setHygiene}
-        />
-      ) : (
-        <>
-          {hatched && (
-            <Button
-              htmlType="button"
-              onClick={() => setStarted(true)}
-              style={{ width: '100%' }}
-            >
-              Start
-            </Button>
-          )}
-        </>
-      )}
+        {started ? (
+          <Wellbeing
+            hunger={hunger}
+            setHunger={setHunger}
+            happiness={happiness}
+            setHappiness={setHappiness}
+            hygiene={hygiene}
+            setHygiene={setHygiene}
+          />
+        ) : (
+          <>
+            {hatched && (
+              <Button
+                htmlType="button"
+                onClick={() => setStarted(true)}
+                style={{ padding: '1rem 2rem', height: 'auto' }}
+              >
+                Start
+              </Button>
+            )}
+          </>
+        )}
+      </div>
     </GameShell>
   );
 };
@@ -79,22 +79,30 @@ const Game: React.FC<{}> = () => {
 export default Game;
 
 const GameShell = styled.div`
+  padding: 3rem 5rem;
+  box-sizing: border-box;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
 
   .cat-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
 
     img {
+      box-sizing: border-box;
+      width: 100%;
       //max-height: 500px;
-      max-width: 500px;
-      //width: 18rem;
+      max-width: 450px;
+      padding: 2rem 0;
       user-drag: none;
       user-select: none;
     }
