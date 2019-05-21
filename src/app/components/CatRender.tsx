@@ -70,11 +70,19 @@ interface CatProps {
   setMood: (mood: string) => void;
 }
 
-const CatRender: React.FC<CatProps> = (props: CatProps) => {
-  const { egg, hunger, happiness, hygiene, mood, started, setMood } = props;
+const CatRender: React.FC<CatProps> = properties => {
+  const {
+    egg,
+    hunger,
+    happiness,
+    hygiene,
+    mood,
+    started,
+    setMood,
+  } = properties;
 
   if (started) {
-    if (hunger < 5 || happiness < 5 || hygiene < 5) {
+    if (hunger < 20 || happiness < 20 || hygiene < 20) {
       setMood('angwy');
     } else {
       setMood('smile');

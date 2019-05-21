@@ -15,9 +15,9 @@ const Game: React.FC<{}> = () => {
   const [started, setStarted] = useState(false);
   const [egg, setEgg] = useState('');
   const [hatched, setHatched] = useState(false);
-  const [hunger, setHunger] = useState(20);
-  const [happiness, setHappiness] = useState(20);
-  const [hygiene, setHygiene] = useState(20);
+  const [hunger, setHunger] = useState(100);
+  const [happiness, setHappiness] = useState(100);
+  const [hygiene, setHygiene] = useState(100);
   const [mood, setMood] = useState('smile');
 
   const selectBreed = () => {

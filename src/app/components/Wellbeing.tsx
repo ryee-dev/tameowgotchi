@@ -4,6 +4,7 @@ import useInterval from '@use-it/interval';
 import { ReactComponent as WashIcon } from '../assets/icons/wash.svg';
 import { ReactComponent as FishIcon } from '../assets/icons/fish.svg';
 import { ReactComponent as ToyIcon } from '../assets/icons/toy.svg';
+import StatusVis from './StatusVis';
 
 interface WellbeingProps {
   hunger: number;
@@ -14,7 +15,7 @@ interface WellbeingProps {
   setHygiene: Function;
 }
 
-const Wellbeing: React.FC<WellbeingProps> = (props: WellbeingProps) => {
+const Wellbeing: React.FC<WellbeingProps> = properties => {
   const {
     hunger,
     happiness,
@@ -22,42 +23,46 @@ const Wellbeing: React.FC<WellbeingProps> = (props: WellbeingProps) => {
     setHunger,
     setHappiness,
     setHygiene,
-  } = props;
+  } = properties;
 
   useInterval(() => {
-    setHunger((currentHunger: number) => currentHunger - 1);
-    setHappiness((currentHappiness: number) => currentHappiness - 1);
-    setHygiene((currentHygiene: number) => currentHygiene - 1);
+    setHunger((currentHunger: number) => currentHunger - 2);
+    setHappiness((currentHappiness: number) => currentHappiness - 2);
+    setHygiene((currentHygiene: number) => currentHygiene - 2);
     console.log(hunger, happiness, hygiene);
-  }, 5000);
+  }, 1000);
 
   if (hunger < 0) {
     setHunger(0);
-  } else if (hunger > 20) {
-    setHunger(20);
+  } else if (hunger > 100) {
+    setHunger(100);
   } else if (happiness < 0) {
     setHappiness(0);
-  } else if (happiness > 20) {
-    setHappiness(20);
+  } else if (happiness > 100) {
+    setHappiness(100);
   } else if (hygiene < 0) {
     setHygiene(0);
-  } else if (hygiene > 20) {
-    setHygiene(20);
+  } else if (hygiene > 100) {
+    setHygiene(100);
   }
 
   return (
     <Wrapper className="container">
       <div className="row">
-        <GameButton onClick={() => setHunger(hunger + 2)}>
+        <GameButton onClick={() => setHunger(hunger + 5)}>
           <FishIcon />
         </GameButton>
-        <GameButton onClick={() => setHappiness(happiness + 2)}>
+        <GameButton onClick={() => setHappiness(happiness + 5)}>
           <ToyIcon />
         </GameButton>
-        <GameButton onClick={() => setHygiene(hygiene + 2)}>
+        <GameButton onClick={() => setHygiene(hygiene + 5)}>
           <WashIcon />
         </GameButton>
       </div>
+      <div className="row">
+        <StatusVis hunger={hunger} happiness={happiness} hygiene={hygiene} />
+      </div>
+
       {/* <div className="row"> */}
       {/*  <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button> */}
       {/*  <Button onClick={() => setHappiness(happiness - 5)}>-happiness</Button> */}
@@ -82,6 +87,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    box-sizing: border-box;
   }
 
   .col {

@@ -39,7 +39,8 @@
     "no-use-before-define": "warn",
     "no-param-reassign": "warn",
     "no-explicit-any": "off",
-    "no-else-return": "off"
+    "no-else-return": "off",
+    "unicorn/prevent-abbreviations": "warn"
   },
   "settings": {
     "import/resolver": {
