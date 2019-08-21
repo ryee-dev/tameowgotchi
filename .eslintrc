@@ -35,12 +35,12 @@
     "@typescript-eslint/class-name-casing": "warn",
     "react/jsx-filename-extension": "off",
     "unicorn/filename-case": "off",
-    "import/extensions": { "ts": "never", "tsx": "never" },
+    "import/extensions": 0,
     "no-use-before-define": "warn",
     "no-param-reassign": "warn",
     "no-explicit-any": "off",
     "no-else-return": "off",
-    "unicorn/prevent-abbreviations": "warn"
+    "unicorn/prevent-abbreviations": "off"
   },
   "settings": {
     "import/resolver": {

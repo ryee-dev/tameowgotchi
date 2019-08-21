@@ -6,7 +6,16 @@ import { useHover } from 'use-events';
 import { ReactComponent as EggSvg } from '../assets/icons/egg.svg';
 import { ReactComponent as HatchingSvg } from '../assets/icons/hatchegg.svg';
 
-const EggWrapper = posed.div({
+const EggWrapper = styled.div`
+  transition: transform 2s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const PosedEgg = posed(EggWrapper)({
   pressable: true,
   init: { scale: 1 },
   press: { scale: 0.9 },
@@ -31,13 +40,13 @@ const Egg: React.FC<EggProps> = (props: EggProps) => {
   return (
     <Container>
       {!started && (
-        <EggWrapper className="egg-wrapper">
+        <PosedEgg>
           {!hatched && (
             <HatchButton onClick={selectBreed} {...bind}>
               {isHovered ? <HatchingSvg /> : <EggSvg />}
             </HatchButton>
           )}
-        </EggWrapper>
+        </PosedEgg>
       )}
 
       {/* <h1>{egg}</h1> */}
@@ -49,25 +58,26 @@ export default Egg;
 
 const Container = styled.div`
   //padding: 4rem;
+  //height: 100%;
+  padding: 0 1rem;
+  width: 100%;
   display: flex;
   align-self: center;
   justify-self: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  .egg-wrapper {
-    transition: transform 2s ease;
-  }
 `;
 
 const HatchButton = styled.div`
-  width: 800px;
-  //max-width: 580px;
+  width: 100%;
+  max-width: 580px;
+  //padding: 3rem;
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
   //transition: transform 0.3s ease-in-out;
 
   svg {
@@ -85,7 +95,13 @@ const HatchButton = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
-    //padding: 0;
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+    //max-width: 580px;
+  }
+
+  @media (min-width: 1440px) {
   }
 `;

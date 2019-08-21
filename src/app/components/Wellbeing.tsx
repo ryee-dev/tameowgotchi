@@ -4,7 +4,7 @@ import useInterval from '@use-it/interval';
 import { ReactComponent as WashIcon } from '../assets/icons/wash.svg';
 import { ReactComponent as FishIcon } from '../assets/icons/fish.svg';
 import { ReactComponent as ToyIcon } from '../assets/icons/toy.svg';
-import StatusVis from './StatusVis';
+// import StatusVis from './StatusVis';
 
 interface WellbeingProps {
   hunger: number;
@@ -49,6 +49,11 @@ const Wellbeing: React.FC<WellbeingProps> = properties => {
   return (
     <Wrapper className="container">
       <div className="row">
+        {hunger < 20 && <p>feed me!</p>}
+        {happiness < 20 && <p>play with me!</p>}
+        {hygiene < 20 && <p>wash me!</p>}
+      </div>
+      <div className="row" style={{ padding: '1rem 0' }}>
         <GameButton onClick={() => setHunger(hunger + 5)}>
           <FishIcon />
         </GameButton>
@@ -59,9 +64,9 @@ const Wellbeing: React.FC<WellbeingProps> = properties => {
           <WashIcon />
         </GameButton>
       </div>
-      <div className="row">
-        <StatusVis hunger={hunger} happiness={happiness} hygiene={hygiene} />
-      </div>
+      {/* <div className="row"> */}
+      {/*  <StatusVis hunger={hunger} happiness={happiness} hygiene={hygiene} /> */}
+      {/* </div> */}
 
       {/* <div className="row"> */}
       {/*  <Button onClick={() => setHunger(hunger - 5)}>-hunger</Button> */}
@@ -88,6 +93,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: space-evenly;
     box-sizing: border-box;
+    //padding: 1rem 0;
   }
 
   .col {
@@ -106,21 +112,43 @@ const GameButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   //padding: 0.6rem;
   border-radius: 100px;
   //border: 1px solid black;
   box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease-in-out;
   cursor: pointer;
+  background-color: white;
 
   svg {
     //padding: 0.2rem;
-    max-width: 1.6rem;
+    max-width: 1rem;
   }
 
   &:active {
     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+
+    svg {
+      max-width: 1.4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 4rem;
+    height: 4rem;
+
+    svg {
+      max-width: 1.6rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
   }
 `;
